@@ -1,42 +1,160 @@
-#root {
-  max-width: 1280px;
+.landingpage {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("/public/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* center vertically to avoid extra top margin */
+  overflow: hidden;
+}
+.landingpage nav {
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding-top: 0rem;
+  margin-top: 0ch;
+  padding-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.landingpage nav h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  padding-inline: 1rem;
+}
+.landingpage nav .navebarlist {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.landingpage nav .navebarlist p,
+.landingpage nav .navebarlist div {
+  margin: 0;
+  cursor: pointer;
+  color: white;
+  font: inherit;
+}
+.landingpage nav .navebarlist button {
+  margin: 0;
+  cursor: pointer;
+  color: white;
+  background: none;
+  border: none;
+  font: inherit;
+}
+.landingpage nav .login-btn {
+  padding: 0.50rem 1rem;
+  border-radius: 0.5rem;
+  background: orange !important;
+  color: #fff;
+  border: none !important;
+}
+.landingpagecontent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 3rem;
+  padding: 0 2rem;
+}
+.content {
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin: 0; /* remove extra top margin that caused overflow */
+}
+.content h1 {
+  margin: 0;
+  font-size: clamp(3rem, 5vw, 4.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+.content h1 span {
+  color: orange;
+  display: inline-block;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.content p {
+  margin: 0;
+  font-size: 1.05rem;
+  opacity: 0.9;
+  max-width: 480px;
+  line-height: 1.7;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.content button {
+  width: fit-content;
+  padding: 0.8rem 1.75rem;
+  background-color: orange;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  font-weight: 600;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.templet {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.templet img {
+  height: 70vh;/* limit image height so it fits within the viewport */
+  transform: rotate(-4deg);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
 }
 
-@keyframes logo-spin {
-  from {
+/* ensure root elements take full height and remove default body margin */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+@media (max-width: 980px) {
+  .landingpage nav {
+    padding-inline: 1rem;
+  }
+  .landingpagecontent {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    padding-inline: 1rem;
+  }
+  .content {
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+  }
+  .templet img {
+    width: min(520px, 100%);
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (max-width: 680px) {
+  .landingpage nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .landingpage nav .navebarlist {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .content h1 {
+    font-size: 2.8rem;
   }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.singbutton{
+  display: flex;
+  gap: 1rem;
 }

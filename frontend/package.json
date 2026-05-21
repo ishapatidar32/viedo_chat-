@@ -12,9 +12,15 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "@mui/material": "^7.3.7",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "@mui/icons-material": "^7.3.11",
+    "@mui/material": "^7.3.11",
+    "axios": "^1.16.1",
+    "http-status": "^2.1.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-router-dom": "^7.15.1",
+    "router-dom": "^3.0.3",
+    "socket.io-client": "^4.8.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
